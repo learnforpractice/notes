@@ -82,11 +82,13 @@ signers = [
 timeout = 10
 ```
 
+```
 user = "3e72ca0c-********-4d8471d375e7"
 session = "e01654********581da0d"
 key = "DHM36cxkdg-4C6z********sZ9I0gxqT5KT2hcGJg"
 buffer = 64
 conversation = "dfe49fde******3f93f1859b3"
+```
 
 `messenger`中的各配置项和机器人中的json格式的对应关系如下：
 
@@ -96,7 +98,7 @@ conversation = "dfe49fde******3f93f1859b3"
 
 接下来讲下如何获取 conversation
 
-用手机上的mixin messenger创建一个群组，把四个机器人都拉到群组中。
+用手机上的 mixin messenger 创建一个群组，把四个机器人都拉到群组中。
 
 把链接`https://mixin.one/context`发到群组中，打开这个链接，显示的uuid即为coversaion
 
@@ -129,11 +131,12 @@ Poly share: 0000000124616ac38d985611df3526d228fa5eec997153ab1d82641478e893db5f1d
 ```
 
 
-其中的Poly public为公钥信息的信息
-Poly share为用于多签的私钥信息，不能公开
+其中的 Poly public 为公钥信息的信息
+Poly share 为用于多签的私钥信息，不能公开
 
 
 接下来开启api接点：
+
 ```bash
 ./tip -c tip1.toml api
 ./tip -c tip2.toml api
@@ -172,6 +175,7 @@ Poly share为用于多签的私钥信息，不能公开
 ```
 
 其中的`commitments`可以通过下面的命令获取：
+
 ```bash
 curl http://127.0.0.1:7004
 ```
